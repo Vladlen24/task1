@@ -120,17 +120,17 @@ def cloud(x1, y1, x2, y2, color): #draws a cloud inside a rectangle (x1,y1), (x2
     part3.draw(win)
     
 # details - lightbulbs dont work either
-'''def lightbulbs(x1, y1, x2, color1, color2):
+def lightbulbs(x1, y1, x2, color1, color2):
     l = (x2-x1)//15
     A = [color1, color2]
     colors = []
     for i in range(l):
         colors.append(A[l%2])
     for i in range(l):
-        new_cir(x1+5*(i+1), y1+5*(i+1), 5, A[i])
-        new_lin(x1+5*(i+1)+5, y1+5, x1+5*(i+1)+10, y1+5, 'black', 2)
+        new_cir(x1+5*(i+1), y1+5*(i+1), 5, colors[i])
+        new_lin(x1+5*(i+1)+5, y1+5, x1+5*(i+1)+10, 'black', 2)
         
-lightbulbs(250, 270, 550, 'red', 'green') '''
+lightbulbs(250, 270, 550, 'red', 'green') 
 
 def window_light():
     global window_down_color #doesn't work for some reason - why doesnt a local variable turn into a global one?
